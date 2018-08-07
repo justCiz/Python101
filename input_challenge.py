@@ -14,5 +14,5 @@ print("Total bill: {0}\n Payment Amount: {1}\n Your change is Php{2}".format(tot
 
 totalBill = input("How much is your total bill? ")
 paymentAmount = input("How much is your payment? ")
-change = float(totalBill) - float(paymentAmount)
-print("Hi! Your change Php{0}".format(change))
+change = float(paymentAmount) - float(totalBill)
+print("Hi! Your change Php{0} ".format(change))
