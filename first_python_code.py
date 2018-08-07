@@ -5,7 +5,7 @@
 organization = 'FTR'
 
 # You can print it right away!
-print('Hello WomanWhoCode!')
+print('Intro to Python by WomanWhoCode-Alysson!')
 
 # Example of string concatenation
 print('Hello ' + organization)
