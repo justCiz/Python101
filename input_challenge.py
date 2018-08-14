@@ -12,7 +12,20 @@ change = totalBill - paymentAmount
 print("Total bill: {0}\n Payment Amount: {1}\n Your change is Php{2}".format(totalBill, paymentAmount, change))
 """
 
-totalBill = input("How much is your total bill? ")
-paymentAmount = input("How much is your payment? ")
-change = float(paymentAmount) - float(totalBill)
-print("Hi! Your change Php{0} ".format(change))
+while(True):
+	try:
+		totalBill = float(input("How much is your total bill? "))
+		break
+	except Exception as e:
+		print("Invalid input. Please enter a number.")
+
+while(True):
+	try:
+		paymentAmount = float(input("How much is your payment? "))
+		break
+	except Exception as e:
+		print("Invalid input. Please enter a number.")
+
+
+change = paymentAmount - totalBill
+print("Hi! Your change Php {0:.2f}".format(change))
