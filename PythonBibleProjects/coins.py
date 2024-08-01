@@ -1,7 +1,10 @@
 import random
 
+# Class is like a template for creating objects. It defines the attributes and methods that will be available to the objects created from the class.
+
+# The __init__ method is a special method that is called when an object is created from a class. It is used to initialize the object's attributes.
 class Coin:
-    def __init__(self, rare =False, clean = True, heads = True, **kwargs):
+    def __init__(self, rare =False, clean = True, heads = True, **kwargs): # constructor
 
         for key,value in kwargs.items():
             setattr(self,key,value)
@@ -26,7 +29,7 @@ class Coin:
     def clean(self):
         self.colour = self.clean_colour
 
-    def __del__(self):
+    def __del__(self): # destructor
         print("Coin Spent!")
 
     def flip(self):
@@ -41,7 +44,7 @@ class Coin:
             return "{}p Coin".format(int(self.original_value * 100))
     
 
-class One_Pence(Coin):
+class One_Pence(Coin): # Inheritance
     def __init__(self):
         data = {"original_value":0.01,
                 "clean_colour":"bronze",
@@ -51,7 +54,7 @@ class One_Pence(Coin):
                 "thickness": 1.52,
                 "mass":3.56,
             }
-        super().__init__(**data)
+        super().__init__(**data) # super() is used to call the __init__ method of the parent class
 
 class Two_Pence(Coin):
     def __init__(self):
